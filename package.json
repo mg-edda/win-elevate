@@ -1,0 +1,41 @@
+{
+  "name": "win-elevate",
+  "version": "1.0.0",
+  "description": "Execute a Windows command in an elevated command prompt and consume its output in real-time",
+  "main": "lib/elevate.js",
+  "homepage": "https://github.com/jviotti/win-elevate",
+  "os": [
+    "win32"
+  ],
+  "bin": {
+    "elevate": "./bin/elevate.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jviotti/win-elevate.git"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "npm run lint",
+    "rebuild": "node scripts/vbs-to-bat.js src/elevate.vbs src/elevate.bat",
+    "lint": "jshint --config .jshintrc --reporter=node_modules/jshint-stylish lib"
+  },
+  "keywords": [
+    "win-elevate",
+    "hoist",
+    "lift",
+    "elevate",
+    "windows",
+    "uac",
+    "sudo",
+    "su"
+  ],
+  "author": "Juan Cruz Viotti <jviottidc@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jshint": "^2.9.2",
+    "jshint-stylish": "^2.2.0"
+  }
+}
